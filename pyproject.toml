@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "src"
+name = "mil_lab"
 version = "0.1.0"
 description = ""
 readme = "README.md"
@@ -20,10 +20,9 @@ create_model = "src.builder:create_model"
 [tool.setuptools.dynamic]
 dependencies = {file = "requirements.txt"}
 
-[tool.setuptools.packages.find]
-exclude = ["dev*", "temp*", "docs", "dist*", "scripts*", "tests*", "checkpoints*"]
+[tool.setuptools]
+package-dir = {"mil_lab" = "src"}
+packages = ["mil_lab", "mil_lab.builders", "mil_lab.components", "mil_lab.models"]
 
 [tool.wheel]
 exclude = ["dev*", "temp*", "docs", "dist*", "scripts*", "tests*", "checkpoints*"]
-
-
