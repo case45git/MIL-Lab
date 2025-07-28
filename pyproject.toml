@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "src"
+name = "mil_lab"
 version = "0.1.0"
 description = ""
 readme = "README.md"
@@ -15,7 +15,7 @@ classifiers = [
 dynamic = ["dependencies"]
 
 [project.scripts] # Scripts for Setuptools go under [project.scripts]
-create_model = "src.builder:create_model"
+create_model = "mil_lab.builder:create_model"
 
 [tool.setuptools.dynamic]
 dependencies = {file = "requirements.txt"}
